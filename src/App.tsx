@@ -13,7 +13,7 @@ import CartDrawer from './components/CartDrawer';
 import ProfileDrawer from './components/ProfileDrawer';
 import SearchDrawer from './components/SearchDrawer';
 import MenuDrawer from './components/MenuDrawer';
-import { NewArrivals, Collection, Sustainability, Contact, Commissions } from './pages/Sections';
+import { NewArrivals, Collection, Sustainability, Contact, Commissions, About } from './pages/Sections';
 import { Product, QuizState, CartItem, View } from './types';
 import { curateCapsule } from './services/geminiService';
 
@@ -99,6 +99,7 @@ export default function App() {
       case 'sustainability': return <Sustainability onBack={() => setView('home')} />;
       case 'contact': return <Contact onBack={() => setView('home')} />;
       case 'commissions': return <Commissions onBack={() => setView('home')} />;
+      case 'about': return <About onBack={() => setView('home')} />;
       default: return null;
     }
   };

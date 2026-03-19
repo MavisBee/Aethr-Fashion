@@ -36,7 +36,7 @@ export interface QuizState {
   mode: 'general' | 'ai';
 }
 
-export type View = 'home' | 'quiz' | 'ai-stylist' | 'reveal' | 'product' | 'new-arrivals' | 'collection' | 'sustainability' | 'contact' | 'commissions';
+export type View = 'home' | 'quiz' | 'ai-stylist' | 'reveal' | 'product' | 'new-arrivals' | 'collection' | 'sustainability' | 'contact' | 'commissions' | 'about';
 
 export interface CartItem extends Product {
   quantity: number;
