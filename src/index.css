@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "PP Editorial New", "Georgia", serif;
+  --font-sans: "Inter", "Helvetica Neue", sans-serif;
+  
+  --color-primary: #0A0A0A;
+  --color-secondary: #F7F7F5;
+  --color-accent: #737373; /* Darkened for better contrast against secondary */
+  --color-border: #E0E0E0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-secondary text-primary font-sans antialiased overflow-x-hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+/* Custom scrollbar for editorial feel */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0A0A0A;
+}
+
+.asymmetric-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+}
+
+.editorial-image {
+  @apply overflow-hidden;
+}
+
+.editorial-image img {
+  @apply transition-transform duration-700 ease-out;
+}
+
+.editorial-image:hover img {
+  @apply scale-105;
+}
